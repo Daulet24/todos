@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin: 20px;
+}
+
+.admin_container {
+  background-color: #81c4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

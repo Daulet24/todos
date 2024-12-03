@@ -1,0 +1,51 @@
+<form class="login-f" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <h1>Register</h1>
+
+  <label class="username">
+    Username
+    <input
+      class="login-input"
+      type="text"
+      formControlName="username"
+      placeholder="Username"
+    />
+  </label>
+  <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched">
+    <p class="error-text">Username is required and should be at least 3 characters long</p>
+  </div>
+
+  <label class="password">
+    Password
+    <input
+      class="login-input"
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+    />
+  </label>
+  <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+    <p class="error-text">Password is required and should be at least 6 characters long</p>
+  </div>
+
+  <label class="password">
+    Confirm password
+    <input
+      class="login-input"
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+    />
+  </label>
+  <div *ngIf="registerForm.get('confirmPassword')?.invalid && registerForm.get('confirmPassword')?.touched">
+    <p class="error-text">Passwords must match</p>
+  </div>
+
+  <button
+    type="submit"
+    class="bg-blue-500 text-white px-20 py-2 rounded-md hover:bg-blue-600 transition"
+    [disabled]="registerForm.invalid"
+  >
+    Register
+  </button>
+  <a routerLink="" class="mt-4 opacity-60 hover:opacity-100">Login</a>
+</form>

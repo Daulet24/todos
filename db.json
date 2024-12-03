@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "f727",
+      "username": "raf",
+      "password": "rafraf",
+      "role": "user"
+    }
+  ],
+  "todos": []
+}
